@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    //宣告商品List
+    IList<Carts.Models.RouteTest.TestProducts> products =
+        new List<Carts.Models.RouteTest.TestProducts>
+        {
+            new Carts.Models.RouteTest.TestProducts{
+                ID = 1,
+                Name = "自動鉛筆",
+                Price = 30
+            },
+            new Carts.Models.RouteTest.TestProducts{
+                ID = 2,
+                Name = "筆記本",
+                Price = 50
+            },
+            new Carts.Models.RouteTest.TestProducts{
+                ID = 3,
+                Name = "橡皮擦",
+                Price = 10
+            }
+        };
+}
+
+<h2>商品列表</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <td>編號</td>
+                <td>名稱</td>
+                <td>售價</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var product in products)
+            {
+                <tr>
+                    <td>@product.ID</td>
+                    <td>@product.Name</td>
+                    <td>@product.Price</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace WebApplication1.Controllers
+namespace Carts.Controllers
 {
     public class HomeController : Controller
     {
@@ -25,6 +25,10 @@ namespace WebApplication1.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
+        }
+        public ActionResult Index2()
+        {
+            return Content("<html><body><h1>一段訊息</h1></body></html>");
         }
     }
 }
